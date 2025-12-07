@@ -1,0 +1,77 @@
+/* Card Wrapper */
+.sp-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-top: 24px;
+  }
+  
+  /* Header */
+  .sp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-bottom: 12px;
+  }
+  
+  .sp-arrow {
+    font-size: 18px;
+    margin-right: 8px;
+    color: #d6007d;
+  }
+  
+  .sp-count {
+    font-size: 16px;
+    font-weight: 600;
+    color: #d6007d;
+  }
+  
+  .sp-location {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+  }
+  
+  /* Table */
+  .sp-body {
+    margin-top: 12px;
+    max-height: 330px; /* scroll if many rows like screenshot */
+    overflow-y: auto;
+  }
+  
+  .sp-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sp-table th {
+    text-align: left;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .sp-table td {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* KPI Pills */
+  .sp-pill {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    border-radius: 999px;
+  }
+  
+  /* Colors exactly like screenshot */
+  .sp-green { background: #27c277; }
+  .sp-yellow { background: #f3b445; }
+  .sp-orange { background: #f26938; }
+  .sp-red { background: #d9534f; }
+  .sp-na { background: #bbb; }
+  

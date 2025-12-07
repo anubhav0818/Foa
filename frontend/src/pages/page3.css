@@ -1,0 +1,251 @@
+/* Main Container */
+.foa-container {
+    width: 100vw;
+    min-height: 100vh;
+    background: #e8edf5;
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+  }
+  
+  /* Card Box */
+  .foa-card {
+    width: 70vw;
+    background: white;
+    border-radius: 1vw;
+    padding: 3vw;
+    box-shadow: 0 0 2vw rgba(0,0,0,0.05);
+  }
+  
+  .title {
+    font-size: 2vw;
+    margin-bottom: 2vh;
+    font-weight: bold;
+  }
+  
+  .label {
+    font-size: 1vw;
+    display: block;
+    margin: 1.5vh 0 1vh;
+  }
+  
+  /* Radio Options */
+  .option-row {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 2vh;
+  }
+  
+  .option-box {
+    width: 15vw;
+    padding: 1.2vh 1vw;
+    border: 0.15vw solid #ccc;
+    border-radius: 0.8vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1vw;
+    cursor: pointer;
+  }
+  
+  .option-box.active {
+    border-color: #e6007a;
+    background: #ffe6f3;
+  }
+  
+  /* Input Field */
+  .input-field {
+    width: 100%;
+    padding: 1.5vh 1vw;
+    border: 0.15vw solid #ccc;
+    border-radius: 0.6vw;
+    font-size: 1vw;
+  }
+  
+  /* Period Section */
+  .period-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+  }
+  
+  .period-box {
+    width: 30vw;
+  }
+  
+  .date-row {
+    display: flex;
+    gap: 1vw;
+  }
+  
+  .date-input {
+    width: 14.5vw;
+    padding: 1.3vh 1vw;
+    border: 0.15vw solid #ccc;
+    border-radius: 0.6vw;
+    font-size: 1vw;
+  }
+  
+  /* Toggle Section */
+  .toggle-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4vh;
+  }
+  
+  .toggle-col {
+    width: 20vw;
+  }
+  
+  .toggle-btns {
+    display: flex;
+    gap: 1vw;
+  }
+  
+  .yes,
+  .no {
+    width: 6vw;
+    padding: 1.2vh 0;
+    border-radius: 0.6vw;
+    border: 0.15vw solid #ccc;
+    background: white;
+    font-size: 1vw;
+    cursor: pointer;
+  }
+  
+  .active {
+    background: #ffebf5 !important;
+    border-color: #e6007a !important;
+  }
+  
+  /* Site selection radio */
+  .radio {
+    width: 12vw;
+  }
+  
+  /* Buttons */
+  .btn-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2vw;
+    margin-top: 5vh;
+  }
+  
+  .cancel-btn {
+    width: 8vw;
+    padding: 1.2vh 0;
+    border-radius: 0.6vw;
+    background: #f2f2f2;
+    font-size: 1vw;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .submit-btn {
+    width: 8vw;
+    padding: 1.2vh 0;
+    border-radius: 0.6vw;
+    background: #e6007a;
+    color: white;
+    font-size: 1vw;
+    cursor: pointer;
+    border: none;
+  }
+  
+
+  /* ⬇⬇⬇ CUSTOM CALENDAR SECTION ⬇⬇⬇ */
+
+.custom-date-input {
+    width: 14.5vw;
+    padding: 1.3vh 1vw;
+    border: 0.15vw solid #ccc;
+    border-radius: 0.6vw;
+    background: #fff;
+    cursor: pointer;
+    font-size: 1vw;
+  }
+  
+  .calendar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .calendar-modal {
+    width: 55vw;
+    background: white;
+    border-radius: 1vw;
+    padding: 2vw;
+  }
+  
+  /* Calendar layout */
+  .cal-wrapper {
+    display: flex;
+    gap: 2vw;
+  }
+  
+  /* Each month */
+  .cal-month h3 {
+    text-align: center;
+    margin-bottom: 1vh;
+    font-size: 1.2vw;
+  }
+  
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 3vw);
+    gap: 0.4vw;
+  }
+  
+  .cal-dayname {
+    text-align: center;
+    font-weight: bold;
+    color: #777;
+    font-size: 0.9vw;
+  }
+  
+  .cal-day {
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    font-size: 0.95vw;
+  }
+  
+  .cal-day:hover {
+    background: #ffd6eb;
+  }
+  
+  .selected {
+    background: #e6007a;
+    color: white;
+  }
+  
+  .calendar-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2vh;
+    gap: 1vw;
+  }
+  
+  .confirm-btn {
+    background: #e6007a;
+    color: white;
+    border: none;
+    padding: 1vh 2vw;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    font-size: 1vw;
+  }
+  
+  /* ⬆⬆⬆ CUSTOM CALENDAR SECTION ⬆⬆⬆ */
+  
