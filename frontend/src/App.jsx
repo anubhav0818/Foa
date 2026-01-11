@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
-import Topbar from "./components/Topbar";
+import Topbar from "./components/topbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-
-// IMPORT PAGES (USE EXACT FILE NAMES)
 import Page1Home from "./pages/Page1Home";
 import Page2List from "./pages/Page2List";
 import Page3Create from "./pages/Page3Create";

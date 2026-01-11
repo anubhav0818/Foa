@@ -1,12 +1,38 @@
-.page1 {
-  width: 100vw;
-  min-height: calc(100vh - var(--topbar-height));
-  padding: clamp(1.6vh, 2vw, 4vh);   /* 12px → 1.6vh, 32px → 4vh */
-  background: var(--bg);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+/* page1.css */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900; /* supports all weights */
+  font-style: normal;
 }
+
+/* Inter Variable Font - Italic */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+
+.page1-blank {
+  width: 100%;
+  /* Full viewport height minus topbar (6vh) and a bit for the fixed footer */
+  height: calc(100vh - var(--topbar-height) - 7vh);
+
+  background: var(--bg);   /* your light grey */
+
+  margin: 0;
+  padding: 0;
+
+  /* Make sure this page never scrolls */
+  overflow: hidden;
+}
+
 
 .page1-canvas {
   width: 100vw;

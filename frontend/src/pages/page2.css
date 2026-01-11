@@ -1,7 +1,32 @@
+/* Inter Variable Font - Normal */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900; /* supports all weights */
+  font-style: normal;
+}
+
+/* Inter Variable Font - Italic */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+
 .clickable-foa {
-  color: #0e0d0d;
+  color: #242639;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
 }
 
 
@@ -56,24 +81,70 @@
   box-shadow: 0 2.6vh 4.5vh rgba(15,23,42,0.08); /* 20px 35px */
   display: flex;
   flex-direction: column;
+  margin-top: 27px;
+  margin-bottom: 20px;
 }
+
+
 
 .page2-tabs {
   display: flex;
-  gap: 3.2vh; /* 24px → ~3.2vh */
-  border-bottom: 0.13vh solid rgba(15,23,42,0.08); /* 1px → 0.13vh */
-  padding-bottom: 2.1vh; /* 16px → ~2.1vh */
+  gap: 32px;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.2px;
+  vertical-align: bottom;
+  
 }
+
+
+.page2-tabs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.create-foa-btn {
+  width: 118px;
+  height: 36px;
+  font-family: Inter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ff1f8f;
+  color: white;
+  font-weight: 600;
+  font-size: 13.63px;
+  line-height: 36.34px;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  letter-spacing: -2%;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.create-foa-btn:hover {
+  opacity: 0.9;
+}
+
+
+
 
 .page2-tab {
   background: none;
   border: none;
   color: #7c8199;
-  font-weight: 600;
+  font-weight: 700;
   padding-bottom: 1.6vh; /* 12px → ~1.6vh */
   position: relative;
   cursor: pointer;
-  font-size: 1.3vw; /* 0.9rem ≈ 14px */
+  font-size: 12px; /* 0.9rem ≈ 14px */
 }
 
 .page2-tab.active {
@@ -104,33 +175,20 @@
 }
 
 .page2-empty-icon {
-  width: 8.4vh;  /* 64px → ~8.4vh */
-  height: 8.4vh;
-  border: 0.26vh solid rgba(15,23,42,0.35); /* 2px → 0.26vh */
-  border-radius: 2.1vh; /* 16px → ~2.1vh */
-  position: relative;
+  width: auto;
+  height: auto;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.page2-empty-dot {
-  position: absolute;
-  top: 1.6vh; /* 12px */
-  right: 1.8vh; /* 14px */
-  width: 1.3vh; /* 10px */
-  height: 1.3vh;
-  border: 0.26vh solid rgba(15,23,42,0.8); /* 2px */
-  border-radius: 50%;
-}
 
-.page2-empty-body {
-  position: absolute;
-  left: 2.9vh; /* 22px */
-  top: 2.6vh; /* 20px */
-  width: 2.4vh; /* 18px */
-  height: 3.4vh; /* 26px */
-  border: 0.26vh solid rgba(15,23,42,0.8); /* 2px */
-  border-radius: 1.05vh; /* 8px */
-  border-top-left-radius: 1.6vh; /* 12px */
-  border-top-right-radius: 1.6vh;
+.nofea-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 1;
 }
 
 @media (max-width: 102vh) { /* 768px → ~102vh */
@@ -157,40 +215,33 @@
   margin-top: 20px;
 }
 
-.page2-table {
+/* .page2-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 8px;
-}
+  
+} */
 /* TABLE */
 .page2-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 1.1vw;
+  
 }
 
 .page2-table thead {
   background: #f8f8f8;
   border-radius: 12px;
+
+  font-size: 14px;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 13.98px;
+  letter-spacing: 0%;
+  color: #606080;
 }
 
-/* .page2-table th {
-  padding: 14px 16px;
-  font-size: 0.95vw;
-  color: #7A7A7A;
-  font-weight: 600;
-  white-space: nowrap;
-}
 
-
-.page2-table td {
-  padding: 10px 16px;
-  font-size: 1.05vw;
-  color: #1E1F31;
-  vertical-align: middle;
-} */
-
-/* FORCE LEFT ALIGNMENT FOR ALL COLUMNS */
 
 .page2-table {
   width: 100%;
@@ -198,11 +249,33 @@
   table-layout: fixed;   /* 🔥 Forces consistent column widths */
 }
 
-.page2-table th,
+.page2-table th{
+  font-weight: 400;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 40px;
+  border: 1px;
+  bottom: 1px;
+  border-radius: 6px;
+  letter-spacing: 0%;
+  color: #606080;
+  gap: 20px;
+  padding-right: 30px;
+  padding-left: 13px;
+}
+
+
 .page2-table td {
   padding: 16px 12px;
   text-align: left;
-  white-space: nowrap;   /* Prevents wrapping */
+  white-space: nowrap;  
+  color: #242639;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: Inter;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%; /* Prevents wrapping */
 }
 
 .page2-table th:nth-child(1),
