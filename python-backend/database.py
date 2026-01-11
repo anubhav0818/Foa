@@ -1,6 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 
-MONGO_URI = "mongodb://localhost:27017"  # same as Compass
+MONGO_URI = "mongodb+srv://anubhav0818:Anubhav20874@cluster0.j3rpuwk.mongodb.net/?appName=Cluster0"
 DB_NAME = "FOA"
 
 client = AsyncIOMotorClient(MONGO_URI)
