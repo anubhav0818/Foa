@@ -10,3 +10,5 @@ db = client[DB_NAME]
 submission_collection = db["Submission"]
 site_collection = db["Site"]
 kpi_collection = db["KPI"]
+
+# done
