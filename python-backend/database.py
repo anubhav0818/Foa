@@ -1,14 +1,20 @@
+import os
 from motor.motor_asyncio import AsyncIOMotorClient
+from dotenv import load_dotenv
 
-MONGO_URI = "mongodb+srv://anubhav0818:Anubhav20874@cluster0.j3rpuwk.mongodb.net/?appName=Cluster0"
-DB_NAME = "FOA"
+# Load .env only in local environment
+load_dotenv()
+
+MONGO_URI = os.getenv("MONGO_URI")
+DB_NAME = os.getenv("DB_NAME", "FOA")
+
+if not MONGO_URI:
+    raise RuntimeError("MONGO_URI is not set in environment variables")
 
 client = AsyncIOMotorClient(MONGO_URI)
 db = client[DB_NAME]
 
-# Collections (matching your Node models)
+# Collections
 submission_collection = db["Submission"]
 site_collection = db["Site"]
 kpi_collection = db["KPI"]
-
-# done
