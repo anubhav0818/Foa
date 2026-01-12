@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Topbar from "./components/topbar";
+import Topbar from "./components/Topbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Page1HomeStyled from "./pages/Page1HomeStyled";
