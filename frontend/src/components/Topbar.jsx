@@ -7,8 +7,6 @@ import HamburgerIconImg from "../assets/Hamburger.png";
 import DownArrowImg from "../assets/DownArrow.png";
 
 
-
-
 export default function Topbar({ onToggleSidebar = () => {}, isSidebarOpen = false }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);

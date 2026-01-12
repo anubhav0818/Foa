@@ -3,11 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./components/topbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import Page1Home from "./pages/Page1Home";
-import Page2List from "./pages/Page2List";
-import Page3Create from "./pages/Page3Create";
-import Page4Report from "./pages/Page4Report";
-
+import Page1HomeStyled from "./pages/Page1HomeStyled";
+import Page2ListStyled from "./pages/Page2ListStyled";
+import Page3CreateStyled from "./pages/Page3CreateStyled";
+import Page4ReportStyled from "./pages/Page4ReportStyled";
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -20,15 +19,23 @@ export default function App() {
       <Topbar onToggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
       <div className="app-body">
         <Sidebar isMobileOpen={isSidebarOpen} onClose={closeSidebar} />
-        {isSidebarOpen && <div className="sidebar-overlay" onClick={closeSidebar} aria-label="Close sidebar overlay" />}
+        {isSidebarOpen && (
+          <div
+            className="sidebar-overlay"
+            onClick={closeSidebar}
+            aria-label="Close sidebar overlay"
+          />
+        )}
 
         <main className="app-main">
           <Routes>
-            <Route path="/" element={<Page1Home />} />
-            <Route path="/list" element={<Page2List />} />
-            <Route path="/create" element={<Page3Create />} />
-            <Route path="/report" element={<Page4Report />} />
-            
+            <Route path="/" element={<Page1HomeStyled />} />
+
+            <Route path="/test" element={<Page4ReportStyled />} />
+
+            <Route path="/list" element={<Page2ListStyled />} />
+            <Route path="/create" element={<Page3CreateStyled />} />
+            <Route path="/report" element={<Page4ReportStyled />} />
           </Routes>
         </main>
       </div>
